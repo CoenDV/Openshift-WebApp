@@ -1,15 +1,30 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <p>{{ msg }}</p>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import axios from 'axios'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+  },
+  mounted() {
+    axios.get("https://openshift-test-git-coen-de-vries-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/api")
+      .then(response => {
+        this.msg = response;})
+      .catch(error => {
+        console.log(error);
+      });
+  },
+  data() {
+    return {
+      msg: ''
+    }
   }
 }
 </script>
