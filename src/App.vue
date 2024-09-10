@@ -16,7 +16,7 @@ export default {
   mounted() {
     axios.get("https://openshift-test-git-coen-de-vries-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/api")
       .then(response => {
-        this.msg = response;})
+        this.msg = response.data;})
       .catch(error => {
         console.log(error);
       });
