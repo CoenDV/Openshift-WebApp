@@ -39,7 +39,7 @@ export default {
     )
       .then(response => {
         console.log(response.data);
-        this.aiMsg = response.choices.message.content;
+        this.aiMsg = response.choices[0].message.content;
       })
       .catch(error => {
         console.log(error);
