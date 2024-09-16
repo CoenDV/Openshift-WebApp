@@ -23,7 +23,7 @@ export default {
         console.log(error);
       });
 
-    axios.post("https://accb-2001-1c04-4200-9500-e8a5-8873-9c6f-9ac.ngrok-free.app/v1/chat/completions",
+    axios.post("https://saved-ferret-rapid.ngrok-free.app/v1/chat/completions",
       {
         "messages": [
           {
