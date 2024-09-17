@@ -23,14 +23,14 @@ export default {
         console.log(error);
       });
 
-    axios.post("https://saved-ferret-rapid.ngrok-free.app/generate",
+    axios.post("https://saved-ferret-rapid.ngrok-free.app/generate/",
       {
         "prompt": "what is the capital of france?"
       }
     )
       .then(response => {
         console.log(response.data);
-        this.aiMsg = response.data.choices[0].message.content;
+        this.aiMsg = response.data.response[0].message.content;
       })
       .catch(error => {
         console.log(error);
