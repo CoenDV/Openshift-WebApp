@@ -25,16 +25,7 @@ export default {
 
     axios.post("https://saved-ferret-rapid.ngrok-free.app/generate",
       {
-        "messages": [
-          {
-            "content": "You are a helpful assistant.",
-            "role": "system"
-          },
-          {
-            "content": "What is the capital of France?",
-            "role": "user"
-          }
-        ]
+        "prompt": "what is the capital of france?"
       }
     )
       .then(response => {
