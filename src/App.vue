@@ -23,7 +23,7 @@ export default {
         console.log(error);
       });
 
-    axios.post("https://saved-ferret-rapid.ngrok-free.app/v1/chat/completions",
+    axios.post("https://saved-ferret-rapid.ngrok-free.app/generate",
       {
         "messages": [
           {
