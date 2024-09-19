@@ -1,5 +1,5 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <img alt="Vue logo" src="./assets/redhat.png">
   <p>{{ msg }}</p>
 
   <h1>Ask a question: </h1>
@@ -63,6 +63,7 @@ export default {
 }
 
 p {
-  max-width: 500px;
+  margin-left: 25%;
+  max-width: 50%;
 }
 </style>
